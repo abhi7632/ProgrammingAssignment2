@@ -12,6 +12,10 @@
 ## and its inverse. Then alist of these function objects is created which will be used to 
 ## access them from cacheSolve function.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 makeCacheMatrix <- function(maty=matrix()) {
     inv <- NULL
     set <- function(maty) {
@@ -27,15 +31,26 @@ makeCacheMatrix <- function(maty=matrix()) {
 }
 
 
+<<<<<<< HEAD
 
 ## cacheSolve function returns inverse from the cache if the inverse exsists there 
 ## otherwise it will use the list of functions created in makeCacheMatrix function
 ## to set the value of matrix and its inverse in the cache
+=======
+## cacheSolve function returns inverse from the cache if the inverse exsists there 
+## otherwise it will use the list of functions created in makeCacheMatrix function
+## to set the value of matrix and its inverse in the cache
+
+>>>>>>> origin/master
 
 cacheSolve <- function(maty=matrix(),func) {
     inv <- func$getinv()
     if(!is.null(inv)) {
+<<<<<<< HEAD
         message("getting cached data")
+=======
+        message("getting cached Inverse")
+>>>>>>> origin/master
         return(inv)
     }
     
@@ -51,3 +66,7 @@ func <- makeCacheMatrix(maty)
 maty <- matrix(data = c(1,2,3,0,1,4,5,6,0),nrow = 3,ncol = 3,byrow = TRUE)
 slv <- cacheSolve(maty,func)
 slv
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
